@@ -1,2 +1,1 @@
-# rs-algo
-Many algorithms implemented in Rust
+Common algorithms implemented by myself
