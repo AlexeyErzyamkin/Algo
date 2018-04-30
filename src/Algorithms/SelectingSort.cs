@@ -1,6 +1,6 @@
 using System;
 
-namespace Algorythms
+namespace Algorithms
 {
     public static class SelectingSort
     {

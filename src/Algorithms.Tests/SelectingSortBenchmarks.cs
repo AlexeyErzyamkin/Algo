@@ -6,7 +6,7 @@ using BenchmarkDotNet.Running;
 
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Algorythms.Tests.Benchmarks
+namespace Algorithms.Tests.Benchmarks
 {
     [TestClass]
     [ClrJob(isBaseline: true), CoreJob]
@@ -24,7 +24,7 @@ namespace Algorythms.Tests.Benchmarks
         [GlobalSetup]
         public void Setup()
         {
-            _values = Helper.InitArray(1000, 1, 100);
+            _values = ArrayHelper.InitArray(1000, 1, 100);
         }
 
         [Benchmark]

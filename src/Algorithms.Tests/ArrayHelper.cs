@@ -1,8 +1,9 @@
 using System;
+using System.Linq;
 
-namespace Algorythms.Tests
+namespace Algorithms.Tests
 {
-    static class Helper
+    public static class ArrayHelper
     {
         public static int[] InitArray(int size, int minValue, int maxValue)
         {
@@ -31,6 +32,15 @@ namespace Algorythms.Tests
             }
 
             return true;
+        }
+
+        public static bool CompareArrays(int[] array1, int[] array2)
+        {
+            var array2Grouped = array2.GroupBy(x2 => x2);
+
+            return array1
+                .GroupBy(x => x)
+                .All(x => x.Count() == array2Grouped.First(x2 => x2.Key == x.Key).Count());
         }
 
         public static void PrintArray(int[] values) => Console.WriteLine(string.Join(", ", values));
